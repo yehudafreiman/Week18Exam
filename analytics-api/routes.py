@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from dal import get_top_customers, get_customers_without_orders, get_zero_credit_active_customers
+from dal import get_alerts_by_border_and_priority, get_top_urgent_zones, get_distance_distribution, get_low_visibility_high_activity, get_hot_zones
 
 router = APIRouter()
 
@@ -22,3 +22,4 @@ def low_visibility_high_activity():
 @router.get("/analytics/hot-zones")
 def hot_zones():
     return get_hot_zones()
+
